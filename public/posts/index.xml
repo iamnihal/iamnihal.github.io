@@ -1,0 +1,235 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Posts on Nihal</title>
+        <link>https://example.com/posts/</link>
+        <description>Recent content in Posts on Nihal</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+        <lastBuildDate>Thu, 22 Jul 2021 19:00:42 +0530</lastBuildDate>
+        <atom:link href="https://example.com/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Intro to Content Security Policy</title>
+            <link>https://example.com/posts/2021/07/intro-to-content-security-policy/</link>
+            <pubDate>Thu, 22 Jul 2021 19:00:42 +0530</pubDate>
+            
+            <guid>https://example.com/posts/2021/07/intro-to-content-security-policy/</guid>
+            <description>Understanding certain web security concepts is crucial for comprehending how browsers, servers, and web applications function in specific scenarios. In this blog post, I&amp;rsquo;ll provide a brief introduction to the Content Security Policy (CSP) mechanism.
+While inspecting the Request/Response cycle, you may have come across this HTTP Header in the response:
+Content-Security-Policy: default-src &#39;self&#39;; script-src static.site.com
+Alternatively, during web app development, you might have encountered this error in the browser console:</description>
+            <content type="html"><![CDATA[<p>Understanding certain web security concepts is crucial for comprehending how browsers, servers, and web applications function in specific scenarios. In this blog post, I&rsquo;ll provide a brief introduction to the Content Security Policy (CSP) mechanism.</p>
+
+  
+  
+  
+  <figure class="image is-3by2"
+          
+           data-align="center" >
+    <img alt="Centered Image" src="/csp-meme_hud638791df1ce2c466da89a92f7a56f93_114365_450x450_fit_q75_box.jpeg" />
+  </figure>
+
+
+<p>While inspecting the Request/Response cycle, you may have come across this HTTP Header in the response:</p>
+<p><code>Content-Security-Policy: default-src 'self'; script-src static.site.com</code></p>
+<p>Alternatively, during web app development, you might have encountered this error in the browser console:</p>
+<p><code>Refused to load the scripts because it violates the following content security policy directive...</code></p>
+<p>These experiences might have left you with some questions:</p>
+<ol>
+<li>What is CSP?</li>
+<li>Why is it necessary?</li>
+<li>How does it work?</li>
+</ol>
+<hr>
+<h1 id="understanding-csp">Understanding CSP</h1>
+<p>CSP, which stands for Content Security Policy, is a mechanism that allows developers to whitelist the locations from which an application can load resources. These resources can include scripts, styles, images, media, and more. The primary objective behind implementing CSP is to mitigate content injection vulnerabilities, with cross-site scripting (XSS) being one of the most common and damaging types of such vulnerabilities. CSP is implemented by specifying the Content-Security-Policy Header followed by directives and schemes.</p>
+<hr>
+<h1 id="why-csp-is-essential">Why CSP is Essential?</h1>
+<p>CSP is essential because, without it, malicious content, such as JavaScript code, could be injected into your website. When rendered, this can lead to XSS vulnerabilities. CSP effectively prevents these malicious codes from being executed within the web application.</p>
+<hr>
+<h1 id="how-csp-works">How CSP Works?</h1>
+<p>CSP accomplishes this by defining trusted locations in the directives from which the application can load resources. Before loading a web page, the browser checks the Content-Security-Policy Header and verifies if the requested resources originate from the allowed sources. If the resources are fetched from whitelisted locations specified in the CSP Header, the browser allows them; otherwise, it blocks the resources.</p>
+<p>For example, consider this CSP header:</p>
+<p><code>Content-Security-Policy: default-src 'self'</code></p>
+<p>This policy contains a single directive, <code>default-src</code>, which permits resources to be loaded only from their own origin (&lsquo;self&rsquo;).</p>
+<p>The <code>self</code> keyword signifies &ldquo;Same Protocol and Same Host&rdquo;, So for ex:</p>
+<ul>
+<li><code>https://github.com/johndoe</code> &amp; <code>https://github.com/test/johndoe</code></li>
+</ul>
+<p>are the same because they both have the same protocol and same host.</p>
+<ul>
+<li><code>https://github.com/bob</code> &amp; <code>http://github.com/bob</code></li>
+</ul>
+<p>are not the same because they have a different protocol.</p>
+<p><code>https://test.github.com/alice</code> &amp; <code>https://github.com/alice</code></p>
+<p>are not the same because they have a different host.</p>
+<p>It&rsquo;s important to note that the <code>default-src</code> directive serves as a fallback for other directives. So, even if you haven&rsquo;t explicitly set other directives, they will automatically inherit the value of the <code>default-src</code> directive. So,</p>
+<p><code>Content-Security-Policy: default-src 'self'; script-src script.site.com</code></p>
+<p>is same as:</p>
+<pre tabindex="0"><code>Content-Security-Policy:
+        connect-src &#39;self&#39;;
+        font-src &#39;self&#39;;
+        frame-src &#39;self&#39;;
+        img-src &#39;self&#39;;
+        manifest-src &#39;self&#39;;
+        media-src &#39;self&#39;;
+        prefetch-src &#39;self&#39;;
+        object-src &#39;self&#39;;
+        script-src &#39;script.site.com&#39;;
+        script-src-elem &#39;self&#39;;
+        script-src-attr &#39;self&#39;;
+        style-src-elem &#39;self&#39;;
+        style-src-attr &#39;self&#39;;
+        worker-src &#39;self&#39;
+</code></pre><p>As you can see, although you didn’t specify the other fetch directives, by default they are set to the value of the default-src directive.</p>
+<p>Did you notice the <code>script-src</code> directive? Its value is set to &lsquo;script.site.com,&rsquo; not <code>self</code>, because explicitly defined directives will override the value of the <code>default-src</code> directive.</p>
+<hr>
+<h1 id="examples-of-csp-policies">Examples of CSP Policies</h1>
+<p>Here are some examples of CSP policies to illustrate the granularity of control CSP offers:</p>
+<p><code>Content-Security-Policy: default-src '*://*.trusted.com'</code></p>
+<p>This policy allows sources from any scheme (http/https) and any subdomain of trusted.com but not &rsquo;trusted.com&rsquo; itself.</p>
+<p><code>Content-Security-Policy: script-src 'self' api.trusted.com</code></p>
+<p>This CSP policy permits loading scripts from its own origin and api.trusted.com. It does not allow executing inline-scripts, such as <!-- raw HTML omitted --> tags, <!-- raw HTML omitted --> tags, onclick events, etc., as CSP considers them unsafe and disables them by default. You can specify &lsquo;unsafe-inline&rsquo; to enable them, but it&rsquo;s not recommended.</p>
+<p><code>Content-Security-Policy: default-src 'none'</code></p>
+<p>This policy blocks all resource loading because the source value is set to &rsquo;none.&rsquo;</p>
+<p>CSP allows for highly customized settings tailored to your application&rsquo;s needs. For instance, consider this policy:</p>
+<ul>
+<li><code>default-src 'none'</code>: Blocks everything.</li>
+<li><code>script-src '*.trusted.com'</code>: Allows scripts from any subdomain of trusted.com.</li>
+<li><code>image-src 'image.trusted.com'</code>: Permits images from image.trusted.com.</li>
+<li><code>font-src 'https://fonts.googleapis.com/' '*://fonts.trusted.com'</code>: Allows fonts from <a href="https://fonts.googleapis.com">https://fonts.googleapis.com</a> and fonts.trusted.com, using any scheme (http/https).</li>
+<li><code>frame-src 'child.trusted.com'</code>: Allows frames to be loaded from child.trusted.com.</li>
+<li><code>report-uri https://report.trusted.com</code>: The report-uri directive instructs the browser to send a POST request to the specified endpoint containing attempted CSP violations in JSON format.</li>
+</ul>
+<p>You can also use <code>Content-Security-Policy-Report-Only</code> as the HTTP header name to instruct the browser to only send reports when CSP violations occur. This header doesn&rsquo;t block anything. It&rsquo;s a good practice to use this header when starting out to build up CSP rules based on violation reports.</p>
+
+  
+  
+  
+  <figure class="image is-3by2"
+          
+           data-align="center" >
+    <img alt="Centered Image" src="/one-does-not_huc07d93c5aae5514ccc16a8ee1616fab8_60004_450x450_fit_q75_box.jpg" />
+  </figure>
+
+
+<hr>
+<h1 id="conclusion">Conclusion</h1>
+<p>This overview provides a glimpse into Content Security Policy. Of course, there&rsquo;s much more to explore, but delving into every detail would make this blog quite extensive.</p>
+<p>Special thanks to <a href="https://www.linkedin.com/in/adit-chanchal-3344b2145/">Adit Chanchal</a> for reviewing this blog.</p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Automate the Shit</title>
+            <link>https://example.com/posts/2019/04/automate-the-shit/</link>
+            <pubDate>Thu, 11 Apr 2019 21:27:13 +0530</pubDate>
+            
+            <guid>https://example.com/posts/2019/04/automate-the-shit/</guid>
+            <description>In this inaugural blog post, I want to share with you the magic of automation - a concept that can transform your daily tasks from mundane to marvelous.
+Automation is the art of streamlining processes, reducing manual labor, and saving precious time. Why waste hours on repetitive chores when you can automate them effortlessly?
+Story [UPDATE]: wallpaperplay.com is not functional anymore.
+One fateful day, I found myself on a quest for minimalist wallpapers to adorn my Elementary OS desktop.</description>
+            <content type="html"><![CDATA[<p>In this inaugural blog post, I want to share with you the magic of automation - a concept that can transform your daily tasks from mundane to marvelous.</p>
+<p>Automation is the art of streamlining processes, reducing manual labor, and saving precious time. Why waste hours on repetitive chores when you can automate them effortlessly?</p>
+
+  
+  
+  
+  <figure class="image is-3by2"
+          
+           data-align="center" >
+    <img alt="Centered Image" src="/can-this-be_hufd4c24f757b396723948b6a95c7438ce_62960_400x450_fit_q75_box.jpg" />
+  </figure>
+
+
+<hr>
+<h1 id="story">Story</h1>
+<p><code>[UPDATE]: wallpaperplay.com is not functional anymore.</code></p>
+<p>One fateful day, I found myself on a quest for minimalist wallpapers to adorn my Elementary OS desktop. My search led me to the promising trove of wallpapers at wallpaperplay.com. However, there was a caveat—the tedious download process:</p>
+<ol>
+<li>Click the Download button.</li>
+<li>Wait for a 5-second countdown.</li>
+<li>Click the generated download link.</li>
+<li>Finally, right-click and save the image.</li>
+</ol>
+<p>I asked myself, &ldquo;Who has the patience for these four steps just to download a wallpaper?&rdquo; Certainly not me.</p>
+<p>It was then that I had a idea to automate this time-consuming process.</p>
+<hr>
+<h1 id="approach">Approach</h1>
+<p>My approach was straightforward:</p>
+<ol>
+<li>Inspect the source code of the current page.</li>
+<li>Extract the wallpaper links embedded within it.</li>
+<li>Save all the links to a file.</li>
+<li>Use the file as an argument for the wget command.</li>
+</ol>
+<p>Now, all I needed to do was translate this concept into working code.</p>
+<hr>
+<h1 id="getting-started">Getting Started</h1>
+<p>Let&rsquo;s say we want to download over 84 wallpapers from this page:</p>
+<p><a href="https://wallpaperplay.com/board/minimalist-desktop-wallpapers">https://wallpaperplay.com/board/minimalist-desktop-wallpapers</a></p>
+<ol>
+<li>First, download the HTML page using the wget command:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>wget https://wallpaperplay.com/board/minimalist-desktop-wallpapers
+</span></span></code></pre></div><p>This command downloads and saves the HTML file with the path name &ldquo;minimalist-desktop-wallpapers.&rdquo;</p>
+<hr>
+<ol start="2">
+<li>Next, extract the filename from the URL using Regular Expressions:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;</span>$1<span style="color:#e6db74">&#34;</span> | grep -Eoi <span style="color:#e6db74">&#39;board/.*&#39;</span> | cut -d<span style="color:#e6db74">&#39;/&#39;</span> -f2<span style="color:#960050;background-color:#1e0010">&#39;</span>
+</span></span></code></pre></div><p>Let’s decode this RegEx:-</p>
+<p><code>echo &quot;$1&quot;</code> means print the URL as output.</p>
+<p><code>grep -Eoi 'board/.*'</code> means match everything that includes and comes after “board/” and using cut command we’ll further cut out board from output and rest will be our filename.</p>
+<p>For ex:<br>
+<a href="https://wallpaperplay.com/board/blue-car-wallpapers">https://wallpaperplay.com/board/blue-car-wallpapers</a> –&gt; “blue-car-wallpapers”.</p>
+<p><a href="https://wallpaperplay.com/board/hipster-galaxy-wallpapers">https://wallpaperplay.com/board/hipster-galaxy-wallpapers</a> –&gt; “hipster-galaxy-wallpapers”.</p>
+<hr>
+<ol start="3">
+<li>Now, we need to extract the links from the downloaded HTML page using Regular Expressions:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>cat <span style="color:#e6db74">&#34;minimalist-desktop-wallpapers&#34;</span> | grep -Eoi <span style="color:#e6db74">&#39;&lt;a[^&gt;]+&gt;&#39;</span>
+</span></span></code></pre></div><p>This command extracts all HTML anchor tags containing links.</p>
+<p><code>grep -Eoi '&lt;a[^&gt;]+&gt;'</code></p>
+<p>This is a Regular Expression which extracts the anchor tags <code>&lt;a&gt;</code>. It means “Match everything that starts with “&lt;a” except “&gt;” in between and upto “&gt;”</p>
+<p>E = Extended
+o = Show only the matched string
+i = Case insensitive search</p>
+<hr>
+<ol start="4">
+<li>Extract links from href attribute.</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>grep -Eoi <span style="color:#e6db74">&#39;/.*jpg&#39;</span>
+</span></span></code></pre></div><p>This Regular Expression will extract the value of href attribute. It means “Match everything that starts with “/” and contains anything afterwards and ends with “.jpg”</p>
+<p>Till here we will get output like this- /walls/full/2/5/9/20629.jpg</p>
+<p>which is a relative URL. We can’t really use this as an argument for wget command. We need to append “https://wallpaperplay.com” at the beginning of the URL to make it absolute URL.</p>
+<hr>
+<ol start="5">
+<li>Making relative URL into absolute URL.</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>sed <span style="color:#e6db74">&#39;s/^/https:\/\/www.wallpaperplay.com/g&#39;</span>
+</span></span></code></pre></div><p>This Regular Expression will add “https://www.wallpaperplay.com” at the beginning of URL.</p>
+<p>sed is stream editor and is basically use for editing text.</p>
+<p>“^” means at the beginning of each line.</p>
+<p>After these operations, we have valid URLs. Redirect all links to a text file using the &ldquo;&gt;&rdquo; operator, and then pass the text file as an argument to wget using the &ldquo;-i&rdquo; flag, specifying the destination folder with &ldquo;-P.&rdquo;</p>
+<hr>
+<h1 id="bringing-it-all-together">Bringing It All Together</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>filename<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>echo <span style="color:#e6db74">&#34;</span>$1<span style="color:#e6db74">&#34;</span> | grep -Eoi <span style="color:#e6db74">&#39;board/.*&#39;</span> | cut -d<span style="color:#e6db74">&#39;/&#39;</span> -f2<span style="color:#66d9ef">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>cat <span style="color:#e6db74">&#34;</span>$filename<span style="color:#e6db74">&#34;</span> | grep -Eoi <span style="color:#e6db74">&#39;&lt;a[^&gt;]+&gt;&#39;</span> | grep -Eoi <span style="color:#e6db74">&#39;/.*jpg&#39;</span> | sed <span style="color:#e6db74">&#39;s/^/https:\/\/www.wallpaperplay.com/g&#39;</span> &gt; links.txt
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>wget $2 $3 -i links.txt -P wallpapers/
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>rm $filename
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>rm links.txt
+</span></span></code></pre></div><hr>
+<p>GitHub: <a href="https://github.com/iamnihal/wallpaperplay">https://github.com/iamnihal/wallpaperplay</a></p>
+<p>That’s all for this blog. See you soon with the new one. ;-)</p>
+]]></content>
+        </item>
+        
+    </channel>
+</rss>

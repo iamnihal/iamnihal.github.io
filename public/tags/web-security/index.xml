@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>web-security on Nihal</title>
+    <link>https://example.com/tags/web-security/</link>
+    <description>Recent content in web-security on Nihal</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+    <lastBuildDate>Thu, 22 Jul 2021 19:00:42 +0530</lastBuildDate><atom:link href="https://example.com/tags/web-security/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Intro to Content Security Policy</title>
+      <link>https://example.com/posts/2021/07/intro-to-content-security-policy/</link>
+      <pubDate>Thu, 22 Jul 2021 19:00:42 +0530</pubDate>
+      
+      <guid>https://example.com/posts/2021/07/intro-to-content-security-policy/</guid>
+      <description>Understanding certain web security concepts is crucial for comprehending how browsers, servers, and web applications function in specific scenarios. In this blog post, I&amp;rsquo;ll provide a brief introduction to the Content Security Policy (CSP) mechanism.
+While inspecting the Request/Response cycle, you may have come across this HTTP Header in the response:
+Content-Security-Policy: default-src &#39;self&#39;; script-src static.site.com
+Alternatively, during web app development, you might have encountered this error in the browser console:</description>
+    </item>
+    
+  </channel>
+</rss>
