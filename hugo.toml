@@ -1,4 +1,4 @@
-baseURL = "https://example.com"
+baseURL = "https://nihalchoudhary.com"
 title   = "Nihal"
 languageCode = "en-us"
 theme = "hello-friend-ng"
@@ -10,7 +10,7 @@ paginate  = 10
 rssLimit  = 10  # Maximum number of items in the RSS feed.
 copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License." # This message is only used by the RSS template.
 
-# googleAnalytics = ""
+googleAnalytics = "G-CXWDRDDR22"
 # disqusShortname = ""
 
 archetypeDir = "archetypes"
@@ -37,7 +37,7 @@ disableHugoGeneratorInject = false
   posts = "/posts/:year/:month/:title/"
 
 [author]
-# name = "Nihal Choudhary"
+# name = "Nihal"
 
 [blackfriday]
   hrefTargetBlank = true
@@ -72,7 +72,7 @@ disableHugoGeneratorInject = false
 
   # Set disableReadOtherPosts to true in order to hide the links to other posts.
   #
-  disableReadOtherPosts = false
+  disableReadOtherPosts = true
 
   # Enable theme toggle
   #

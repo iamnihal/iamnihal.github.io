@@ -2,52 +2,52 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://example.com/fr/categories/</loc>
+    <loc>https://nihalchoudhary.com/fr/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://example.com/categories/"
+                href="https://nihalchoudhary.com/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="https://example.com/fr/categories/"
+                href="https://nihalchoudhary.com/fr/categories/"
                 />
   </url><url>
-    <loc>https://example.com/fr/</loc>
+    <loc>https://nihalchoudhary.com/fr/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://example.com/"
+                href="https://nihalchoudhary.com/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="https://example.com/fr/"
+                href="https://nihalchoudhary.com/fr/"
                 />
   </url><url>
-    <loc>https://example.com/fr/series/</loc>
+    <loc>https://nihalchoudhary.com/fr/series/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://example.com/series/"
+                href="https://nihalchoudhary.com/series/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="https://example.com/fr/series/"
+                href="https://nihalchoudhary.com/fr/series/"
                 />
   </url><url>
-    <loc>https://example.com/fr/tags/</loc>
+    <loc>https://nihalchoudhary.com/fr/tags/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://example.com/tags/"
+                href="https://nihalchoudhary.com/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="https://example.com/fr/tags/"
+                href="https://nihalchoudhary.com/fr/tags/"
                 />
   </url>
 </urlset>
