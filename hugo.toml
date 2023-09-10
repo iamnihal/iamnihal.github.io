@@ -1,7 +1,7 @@
 baseURL = "https://nihalchoudhary.in"
 title   = "Nihal"
 languageCode = "en-us"
-theme = ""
+theme = "hello-friend-ng"
 
 PygmentsCodeFences = true
 PygmentsStyle = "monokai"
