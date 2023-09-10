@@ -14,7 +14,7 @@ In this inaugural blog post, I want to share with you the magic of automation - 
 
 Automation is the art of streamlining processes, reducing manual labor, and saving precious time. Why waste hours on repetitive chores when you can automate them effortlessly?
 
-{{< image src="can-this-be.jpg" alt="can this be automated" size="400x450" align="center" >}}
+{{< image src="/can-this-be.jpg" alt="can this be automated" size="400x450" align="center" >}}
 
 ---
 
