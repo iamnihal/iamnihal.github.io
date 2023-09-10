@@ -9,7 +9,7 @@ tags:
 ---
 Understanding certain web security concepts is crucial for comprehending how browsers, servers, and web applications function in specific scenarios. In this blog post, I'll provide a brief introduction to the Content Security Policy (CSP) mechanism.
 
-{{< image src="/csp-meme.jpeg" alt="Centered Image" size="450x450" align="center" >}}
+{{< image src="csp-meme.jpeg" alt="CSP Meme" size="450x450" align="center" >}}
 
 While inspecting the Request/Response cycle, you may have come across this HTTP Header in the response:
 
@@ -117,7 +117,7 @@ CSP allows for highly customized settings tailored to your application's needs. 
 
 You can also use `Content-Security-Policy-Report-Only` as the HTTP header name to instruct the browser to only send reports when CSP violations occur. This header doesn't block anything. It's a good practice to use this header when starting out to build up CSP rules based on violation reports.
 
-{{< image src="/one-does-not.jpg" alt="Centered Image" size="450x450" align="center" >}}
+{{< image src="one-does-not.jpg" alt="One does not simply" size="450x450" align="center" >}}
 
 ---
 
