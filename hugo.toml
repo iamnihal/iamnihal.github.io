@@ -102,8 +102,8 @@ disableHugoGeneratorInject = false
   customCSS = []
   customJS  = []
 
-  [markup.goldmark.renderer]
-  unsafe = true # Allow HTML in md files
+  # [markup.goldmark.renderer]
+  # unsafe = true # Allow HTML in md files
 
 
   # Toggle this option need to rebuild SCSS, requires extended version of Hugo
