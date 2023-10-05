@@ -15,6 +15,24 @@ Alternatively, during web app development, you might have encountered this error
 <link rel="canonical" href="https://nihalchoudhary.in/posts/2021/07/intro-to-content-security-policy/" />
 
 
+
+
+<meta property="og:locale" content="en_GB">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Intro to Content Security Policy &middot; Nihal">
+<meta property="og:description" content="Understanding certain web security concepts is crucial for comprehending how browsers, servers, and web applications function in specific scenarios. In this blog post, I&amp;amp;rsquo;ll provide a brief introduction to the Content Security Policy (CSP) mechanism.
+While inspecting the Request/Response cycle, you may have come across this HTTP Header in the response:
+Content-Security-Policy: default-src &amp;#39;self&amp;#39;; script-src static.site.com
+Alternatively, during web app development, you might have encountered this error in the browser console:">
+<meta property="og:url" content="https://nihalchoudhary.in/posts/2021/07/intro-to-content-security-policy/">
+<meta property="og:site_name" content="Nihal">
+
+  <meta property="og:image" content="https://raw.githubusercontent.com/iamnihal/iamnihal.github.io/main/assets/banner.png">
+  <meta property="og:image:secure_url" content="https://raw.githubusercontent.com/iamnihal/iamnihal.github.io/main/assets/banner.png">
+
+<meta property="article:published_time" content="2021-07-22T19:00:42Z">
+
+
     <title>
         
             Intro to Content Security Policy :: Nihal 
@@ -44,7 +62,7 @@ While inspecting the Request/Response cycle, you may have come across this HTTP 
 Content-Security-Policy: default-src &#39;self&#39;; script-src static.site.com
 Alternatively, during web app development, you might have encountered this error in the browser console:"><meta itemprop="datePublished" content="2021-07-22T19:00:42+05:30" />
 <meta itemprop="dateModified" content="2021-07-22T19:00:42+05:30" />
-<meta itemprop="wordCount" content="764"><meta itemprop="image" content="https://nihalchoudhary.in"/>
+<meta itemprop="wordCount" content="556"><meta itemprop="image" content="https://nihalchoudhary.in"/>
 <meta itemprop="keywords" content="web-security," />
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://nihalchoudhary.in"/>
@@ -124,7 +142,7 @@ if (!doNotTrack) {
         <span class="header__right">
             
                 <nav class="menu">
-    <ul class="menu__inner"><li><a href="https://nihalchoudhary.in/about/">About</a></li><li><a href="https://nihalchoudhary.in/posts/">Posts</a></li>
+    <ul class="menu__inner"><li><a href="https://nihalchoudhary.in/about/">About</a></li><li><a href="https://nihalchoudhary.in/posts/">Posts</a></li><li><a href="https://nihalchoudhary.in/projects/">Projects</a></li>
     </ul>
 </nav>
 
@@ -155,7 +173,7 @@ if (!doNotTrack) {
           <circle cx="12" cy="12" r="10"></circle>
           <polyline points="12 6 12 12 16 14"></polyline>
         </svg>
-        4 minutes
+        3 minutes
 
         
       </p>
@@ -243,7 +261,7 @@ if (!doNotTrack) {
 <p><code>Content-Security-Policy: default-src '*://*.trusted.com'</code></p>
 <p>This policy allows sources from any scheme (http/https) and any subdomain of trusted.com but not &rsquo;trusted.com&rsquo; itself.</p>
 <p><code>Content-Security-Policy: script-src 'self' api.trusted.com</code></p>
-<p>This CSP policy permits loading scripts from its own origin and api.trusted.com. It does not allow executing inline-scripts, such as <!-- raw HTML omitted --> tags, <!-- raw HTML omitted --> tags, onclick events, etc., as CSP considers them unsafe and disables them by default. You can specify &lsquo;unsafe-inline&rsquo; to enable them, but it&rsquo;s not recommended.</p>
+<p>This CSP policy permits loading scripts from its own origin and api.trusted.com. It does not allow executing inline-scripts, such as <script> tags, <style> tags, onclick events, etc., as CSP considers them unsafe and disables them by default. You can specify &lsquo;unsafe-inline&rsquo; to enable them, but it&rsquo;s not recommended.</p>
 <p><code>Content-Security-Policy: default-src 'none'</code></p>
 <p>This policy blocks all resource loading because the source value is set to &rsquo;none.&rsquo;</p>
 <p>CSP allows for highly customized settings tailored to your application&rsquo;s needs. For instance, consider this policy:</p>
@@ -295,7 +313,7 @@ if (!doNotTrack) {
           <line x1="16" y1="17" x2="8" y2="17"></line>
           <polyline points="10 9 9 9 8 9"></polyline>
         </svg>
-        764 Words
+        556 Words
       </p>
 
       <p>

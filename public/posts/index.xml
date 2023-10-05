@@ -89,7 +89,7 @@ Alternatively, during web app development, you might have encountered this error
 <p><code>Content-Security-Policy: default-src '*://*.trusted.com'</code></p>
 <p>This policy allows sources from any scheme (http/https) and any subdomain of trusted.com but not &rsquo;trusted.com&rsquo; itself.</p>
 <p><code>Content-Security-Policy: script-src 'self' api.trusted.com</code></p>
-<p>This CSP policy permits loading scripts from its own origin and api.trusted.com. It does not allow executing inline-scripts, such as <!-- raw HTML omitted --> tags, <!-- raw HTML omitted --> tags, onclick events, etc., as CSP considers them unsafe and disables them by default. You can specify &lsquo;unsafe-inline&rsquo; to enable them, but it&rsquo;s not recommended.</p>
+<p>This CSP policy permits loading scripts from its own origin and api.trusted.com. It does not allow executing inline-scripts, such as <script> tags, <style> tags, onclick events, etc., as CSP considers them unsafe and disables them by default. You can specify &lsquo;unsafe-inline&rsquo; to enable them, but it&rsquo;s not recommended.</p>
 <p><code>Content-Security-Policy: default-src 'none'</code></p>
 <p>This policy blocks all resource loading because the source value is set to &rsquo;none.&rsquo;</p>
 <p>CSP allows for highly customized settings tailored to your application&rsquo;s needs. For instance, consider this policy:</p>

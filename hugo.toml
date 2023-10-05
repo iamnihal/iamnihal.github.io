@@ -102,6 +102,10 @@ disableHugoGeneratorInject = false
   customCSS = []
   customJS  = []
 
+  [markup.goldmark.renderer]
+  unsafe = true # Allow HTML in md files
+
+
   # Toggle this option need to rebuild SCSS, requires extended version of Hugo
   #
   justifyContent = false  # Set "text-align: justify" to .post-content.
@@ -196,3 +200,7 @@ disableHugoGeneratorInject = false
     identifier = "posts"
     name       = "Posts"
     url        = "posts/"
+  [[menu.main]]
+    identifier = "projects"
+    name       = "Projects"
+    url        = "projects/"
