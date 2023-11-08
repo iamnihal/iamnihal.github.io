@@ -20,13 +20,18 @@ aliases = ["projects","oss","hobby-projects"]
 
   Streamlined web utilities: URL & Base64 encoding, hash generation, JSON prettifying, and more for efficient development.
 
-- ### **[YouSort](href="https://github.com/iamnihal/yousort)**
+- ### **[gh-archive](https://github.com/iamnihal/gh-archive)**
+  `Tech Stack: Go`
+
+  gh-archive (GitHub Archive) is a Go-based command-line tool to locate archived repositories within a designated GitHub topic. Quickly discover which repositories are no longer actively maintained.
+
+- ### **[YouSort](https://github.com/iamnihal/yousort)**
   `Tech Stack: Python`
 
   YouSort is a small Python utility that sorts trending YouTube videos based on their rating. Here rating indicates the ratio of likes to dislike.
 
-- ### **[Cricbuzz](href="https://github.com/iamnihal/cricbuzz)**
+- ### **[Cricbuzz](https://github.com/iamnihal/cricbuzz)**
   `Tech Stack: Bash`
 
-  A sript that fetches the list of live matches and their respective runs from cricbuzz website.
+  A sript that fetches the list of live matches and their respective runs from cricbuzz website using Regular Expressions.
 
