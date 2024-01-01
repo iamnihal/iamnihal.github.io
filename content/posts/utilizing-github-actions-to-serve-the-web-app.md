@@ -1,7 +1,7 @@
 ---
 title: "Utilizing Github Actions to Serve a tool via Web"
 date: 2023-12-31T17:17:04+05:30
-draft: true
+draft: false
 toc: false
 images:
 tags:

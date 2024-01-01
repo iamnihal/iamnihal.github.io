@@ -2,6 +2,21 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://nihalchoudhary.in/tags/go-github/</loc>
+    <lastmod>2023-12-31T17:17:04+05:30</lastmod>
+  </url><url>
+    <loc>https://nihalchoudhary.in/</loc>
+    <lastmod>2023-12-31T17:17:04+05:30</lastmod>
+  </url><url>
+    <loc>https://nihalchoudhary.in/posts/</loc>
+    <lastmod>2023-12-31T17:17:04+05:30</lastmod>
+  </url><url>
+    <loc>https://nihalchoudhary.in/tags/</loc>
+    <lastmod>2023-12-31T17:17:04+05:30</lastmod>
+  </url><url>
+    <loc>https://nihalchoudhary.in/posts/2023/12/utilizing-github-actions-to-serve-a-tool-via-web/</loc>
+    <lastmod>2023-12-31T17:17:04+05:30</lastmod>
+  </url><url>
     <loc>https://nihalchoudhary.in/books/</loc>
     <lastmod>2023-10-14T00:00:00+00:00</lastmod>
   </url><url>
@@ -12,15 +27,6 @@
     <lastmod>2023-09-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://nihalchoudhary.in/posts/2021/07/intro-to-content-security-policy/</loc>
-    <lastmod>2021-07-22T19:00:42+05:30</lastmod>
-  </url><url>
-    <loc>https://nihalchoudhary.in/</loc>
-    <lastmod>2021-07-22T19:00:42+05:30</lastmod>
-  </url><url>
-    <loc>https://nihalchoudhary.in/posts/</loc>
-    <lastmod>2021-07-22T19:00:42+05:30</lastmod>
-  </url><url>
-    <loc>https://nihalchoudhary.in/tags/</loc>
     <lastmod>2021-07-22T19:00:42+05:30</lastmod>
   </url><url>
     <loc>https://nihalchoudhary.in/tags/web-security/</loc>

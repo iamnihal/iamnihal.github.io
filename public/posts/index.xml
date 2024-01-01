@@ -6,8 +6,117 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
         <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-        <lastBuildDate>Thu, 22 Jul 2021 19:00:42 +0530</lastBuildDate>
+        <lastBuildDate>Sun, 31 Dec 2023 17:17:04 +0530</lastBuildDate>
         <atom:link href="https://nihalchoudhary.in/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Utilizing Github Actions to Serve a tool via Web</title>
+            <link>https://nihalchoudhary.in/posts/2023/12/utilizing-github-actions-to-serve-a-tool-via-web/</link>
+            <pubDate>Sun, 31 Dec 2023 17:17:04 +0530</pubDate>
+            
+            <guid>https://nihalchoudhary.in/posts/2023/12/utilizing-github-actions-to-serve-a-tool-via-web/</guid>
+            <description>TL;DR: I employed GitHub Actions to execute a Go utility, essentially utilizing GitHub Actions as a server to serve my Go tool via a Web interface.
+Just for fun, I wanted to serve one of my Go tools gh-archive through a web interface. After some thought, I decided to make use of (or exploit) GitHub Actions.
+Strategy: Gather user input through an HTML form (hosted via GitHub pages). Trigger a dispatch event to create a workflow in GitHub with a unique name.</description>
+            <content type="html"><![CDATA[<p><strong>TL;DR:</strong> I employed GitHub Actions to execute a Go utility, essentially utilizing GitHub Actions as a server to serve my Go tool via a Web interface.</p>
+<hr>
+<p>Just for fun, I wanted to serve one of my Go tools <a href="https://github.com/iamnihal/gh-archive">gh-archive</a> through a web interface. After some thought, I decided to make use of (or exploit) GitHub Actions.</p>
+<h1 id="strategy">Strategy:</h1>
+<ol>
+<li>Gather user input through an HTML form (hosted via GitHub pages).</li>
+<li>Trigger a dispatch event to create a workflow in GitHub with a unique name.</li>
+<li>The GitHub Workflow will perform the tasks of building, running, and saving the output file of the Go program.</li>
+<li>Retrieve the list of all workflow and iterate through the JSON results to match the workflow name.</li>
+<li>Check the status of that workflow, if it&rsquo;s completed or not.</li>
+<li>If the workflow status is completed, retrieve the downloadable URL of the artifacts, download, and extract them.</li>
+<li>Display the content extracted from the output file back to the user.</li>
+</ol>
+<p>To execute these steps, I skimmed through the GitHub REST API Documentation to identify the necessary APIs for the tasks at hand.</p>
+<h1 id="github-workflow">GitHub Workflow:</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">name</span>: <span style="color:#ae81ff">Go</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">run-name</span>: <span style="color:#e6db74">&#34;${{ github.event.inputs.run_id }}&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">on</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">workflow_dispatch</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">inputs</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">topic</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">description</span>: <span style="color:#e6db74">&#39;Repository topic&#39;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">required</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">repo</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">description</span>: <span style="color:#e6db74">&#39;Number of repositories to check&#39;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">required</span>: <span style="color:#66d9ef">false</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">run_id</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">description</span>: <span style="color:#e6db74">&#39;Workflow name&#39;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">required</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">jobs</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">build</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">runs-on</span>: <span style="color:#ae81ff">ubuntu-latest</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">steps</span>:
+</span></span><span style="display:flex;"><span>    - <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">actions/checkout@v3</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Fetch Go Program Repository</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">run</span>: <span style="color:#ae81ff">git clone https://github.com/iamnihal/gh-archive.git gh-archive</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Set up Go</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">actions/setup-go@v4</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">with</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">go-version</span>: <span style="color:#e6db74">&#39;1.21.3&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Build</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">run</span>: <span style="color:#ae81ff">go build -v -o main .</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">working-directory</span>: <span style="color:#ae81ff">./gh-archive</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Run</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">run</span>: <span style="color:#ae81ff">./gh-archive/main -t &#34;${{ github.event.inputs.topic }}&#34; -n &#34;${{ github.event.inputs.repo }}&#34; -o ./gh-archive/output.txt</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Save Output</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">actions/upload-artifact@v2</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">with</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">name</span>: <span style="color:#ae81ff">go-output</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">path</span>: <span style="color:#ae81ff">./gh-archive/output.txt</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">access-artifact</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">needs</span>: <span style="color:#ae81ff">build</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">runs-on</span>: <span style="color:#ae81ff">ubuntu-latest</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">steps</span>:
+</span></span><span style="display:flex;"><span>    - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Download Artifact</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">actions/download-artifact@v2</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">with</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">name</span>: <span style="color:#ae81ff">go-output</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">path</span>: <span style="color:#ae81ff">./downloaded-artifact</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Print Contents</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">run</span>: |<span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        cat ./downloaded-artifact/output.txt</span>        
+</span></span></code></pre></div><p>The workflow is pretty much self-explanatory. The workflow is triggered by a manual dispatch event (workflow_dispatch), allowing the user to input values such as the repository topic, the number of repositories to check (repo), and the workflow name (run_id). Then it goes on to set up Go, building, running, and saving the output file of the Go program to the GitHub storage.</p>
+<h1 id="indexhtml">index.html</h1>
+<p><a href="https://github.com/iamnihal/gh-archive-web/blob/main/index.html">Click here</a> to view the HTML source code.</p>
+<p>Within the HTML file, there are two crucial JavaScript functions:</p>
+<ol>
+<li><code>triggerWorkflow(topic, repo)</code> - This function initiates a dispatch event to GitHub Actions, subsequently retrieving the list of all workflow runs for a repository. It then matches the &ldquo;run_id&rdquo; to identify the corresponding workflow run.</li>
+</ol>
+<p><strong>APIs:</strong></p>
+<pre tabindex="0"><code>/repos/OWNER/REPO/actions/workflows/WORKFLOW_ID/dispatches
+</code></pre><pre tabindex="0"><code>/repos/OWNER/REPO/actions/runs
+</code></pre><ol>
+<li><code>checkWorkflowCompletion()</code> - This function retrieves details about a specific workflow run to assess its completion status. If the status is &ldquo;completed,&rdquo; it proceeds to download the artifacts, unzip them, perform JSON parsing, and present the results to the user.</li>
+</ol>
+<p><strong>APIs:</strong></p>
+<pre tabindex="0"><code>/repos/OWNER/REPO/actions/runs/RUN_ID
+</code></pre><pre tabindex="0"><code>/repos/OWNER/REPO/actions/runs/RUN_ID/artifacts
+</code></pre><h1 id="demo">demo</h1>
+<p>You can try it here <a href="https://iamnihal.github.io/gh-archive-web/">https://iamnihal.github.io/gh-archive-web/</a></p>
+
+
+<video width=100% controls autoplay>
+    <source src="/posts/demo.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+
+<hr>
+]]></content>
+        </item>
         
         <item>
             <title>Intro to Content Security Policy</title>
