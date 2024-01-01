@@ -7,18 +7,14 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-    <lastBuildDate>Thu, 22 Jul 2021 19:00:42 +0530</lastBuildDate><atom:link href="https://nihalchoudhary.in/tags/web-security/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 22 Jul 2021 19:00:42 +0530</lastBuildDate>
+    <atom:link href="https://nihalchoudhary.in/tags/web-security/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Intro to Content Security Policy</title>
       <link>https://nihalchoudhary.in/posts/2021/07/intro-to-content-security-policy/</link>
       <pubDate>Thu, 22 Jul 2021 19:00:42 +0530</pubDate>
-      
       <guid>https://nihalchoudhary.in/posts/2021/07/intro-to-content-security-policy/</guid>
-      <description>Understanding certain web security concepts is crucial for comprehending how browsers, servers, and web applications function in specific scenarios. In this blog post, I&amp;rsquo;ll provide a brief introduction to the Content Security Policy (CSP) mechanism.
-While inspecting the Request/Response cycle, you may have come across this HTTP Header in the response:
-Content-Security-Policy: default-src &#39;self&#39;; script-src static.site.com
-Alternatively, during web app development, you might have encountered this error in the browser console:</description>
+      <description>Understanding certain web security concepts is crucial for comprehending how browsers, servers, and web applications function in specific scenarios. In this blog post, I&amp;rsquo;ll provide a brief introduction to the Content Security Policy (CSP) mechanism.&#xA;While inspecting the Request/Response cycle, you may have come across this HTTP Header in the response:&#xA;Content-Security-Policy: default-src &#39;self&#39;; script-src static.site.com&#xA;Alternatively, during web app development, you might have encountered this error in the browser console:</description>
     </item>
-    
   </channel>
 </rss>
