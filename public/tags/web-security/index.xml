@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>web-security on Nihal</title>
+    <title>Web-Security on Nihal</title>
     <link>https://nihalchoudhary.in/tags/web-security/</link>
-    <description>Recent content in web-security on Nihal</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Web-Security on Nihal</description>
+    <generator>Hugo</generator>
     <language>en</language>
-    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
     <lastBuildDate>Thu, 22 Jul 2021 19:00:42 +0530</lastBuildDate>
     <atom:link href="https://nihalchoudhary.in/tags/web-security/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -14,7 +13,7 @@
       <link>https://nihalchoudhary.in/posts/2021/07/intro-to-content-security-policy/</link>
       <pubDate>Thu, 22 Jul 2021 19:00:42 +0530</pubDate>
       <guid>https://nihalchoudhary.in/posts/2021/07/intro-to-content-security-policy/</guid>
-      <description>Understanding certain web security concepts is crucial for comprehending how browsers, servers, and web applications function in specific scenarios. In this blog post, I&amp;rsquo;ll provide a brief introduction to the Content Security Policy (CSP) mechanism.&#xA;While inspecting the Request/Response cycle, you may have come across this HTTP Header in the response:&#xA;Content-Security-Policy: default-src &#39;self&#39;; script-src static.site.com&#xA;Alternatively, during web app development, you might have encountered this error in the browser console:</description>
+      <description>&lt;p&gt;Understanding certain web security concepts is crucial for comprehending how browsers, servers, and web applications function in specific scenarios. In this blog post, I&amp;rsquo;ll provide a brief introduction to the Content Security Policy (CSP) mechanism.&lt;/p&gt;&#xA;&#xA;  &#xA;  &#xA;  &#xA;  &lt;figure class=&#34;image is-3by2&#34;&#xA;          &#xA;           data-align=&#34;center&#34; &gt;&#xA;    &lt;img alt=&#34;CSP Meme&#34; src=&#34;https://nihalchoudhary.in/csp-meme_hu_69faa4e51a668de9.jpeg&#34; /&gt;&#xA;  &lt;/figure&gt;&#xA;&#xA;&lt;p&gt;While inspecting the Request/Response cycle, you may have come across this HTTP Header in the response:&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;Content-Security-Policy: default-src &#39;self&#39;; script-src static.site.com&lt;/code&gt;&lt;/p&gt;&#xA;&lt;p&gt;Alternatively, during web app development, you might have encountered this error in the browser console:&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

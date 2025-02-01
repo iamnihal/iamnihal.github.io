@@ -5,7 +5,6 @@
         <description>Recent content in Posts on Nihal</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
-        <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
         <lastBuildDate>Sun, 31 Dec 2023 17:17:04 +0530</lastBuildDate>
         <atom:link href="https://nihalchoudhary.in/posts/index.xml" rel="self" type="application/rss+xml" />
         
@@ -15,9 +14,20 @@
             <pubDate>Sun, 31 Dec 2023 17:17:04 +0530</pubDate>
             
             <guid>https://nihalchoudhary.in/posts/2023/12/utilizing-github-actions-to-serve-a-tool-via-web/</guid>
-            <description>TL;DR: I employed GitHub Actions to execute a Go utility, essentially utilizing GitHub Actions as a server to serve my Go tool via a Web interface.
-Just for fun, I wanted to serve one of my Go tools gh-archive through a web interface. After some thought, I decided to make use of (or exploit) GitHub Actions.
-Strategy: Gather user input through an HTML form (hosted via GitHub pages). Trigger a dispatch event to create a workflow in GitHub with a unique name.</description>
+            <description>&lt;p&gt;&lt;strong&gt;TL;DR:&lt;/strong&gt; I employed GitHub Actions to execute a Go utility, essentially utilizing GitHub Actions as a server to serve my Go tool via a Web interface.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Just for fun, I wanted to serve one of my Go tools &lt;a href=&#34;https://github.com/iamnihal/gh-archive&#34;&gt;gh-archive&lt;/a&gt; through a web interface. After some thought, I decided to make use of (or exploit) GitHub Actions.&lt;/p&gt;
+&lt;h1 id=&#34;strategy&#34;&gt;Strategy:&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;Gather user input through an HTML form (hosted via GitHub pages).&lt;/li&gt;
+&lt;li&gt;Trigger a dispatch event to create a workflow in GitHub with a unique name.&lt;/li&gt;
+&lt;li&gt;The GitHub Workflow will perform the tasks of building, running, and saving the output file of the Go program.&lt;/li&gt;
+&lt;li&gt;Retrieve the list of all workflow and iterate through the JSON results to match the workflow name.&lt;/li&gt;
+&lt;li&gt;Check the status of that workflow, if it&amp;rsquo;s completed or not.&lt;/li&gt;
+&lt;li&gt;If the workflow status is completed, retrieve the downloadable URL of the artifacts, download, and extract them.&lt;/li&gt;
+&lt;li&gt;Display the content extracted from the output file back to the user.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;To execute these steps, I skimmed through the GitHub REST API Documentation to identify the necessary APIs for the tasks at hand.&lt;/p&gt;</description>
             <content type="html"><![CDATA[<p><strong>TL;DR:</strong> I employed GitHub Actions to execute a Go utility, essentially utilizing GitHub Actions as a server to serve my Go tool via a Web interface.</p>
 <hr>
 <p>Just for fun, I wanted to serve one of my Go tools <a href="https://github.com/iamnihal/gh-archive">gh-archive</a> through a web interface. After some thought, I decided to make use of (or exploit) GitHub Actions.</p>
@@ -88,7 +98,7 @@ Strategy: Gather user input through an HTML form (hosted via GitHub pages). Trig
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Print Contents</span>
 </span></span><span style="display:flex;"><span>      <span style="color:#f92672">run</span>: |<span style="color:#e6db74">
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        cat ./downloaded-artifact/output.txt</span>        
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        cat ./downloaded-artifact/output.txt</span>
 </span></span></code></pre></div><p>The workflow is pretty much self-explanatory. The workflow is triggered by a manual dispatch event (workflow_dispatch), allowing the user to input values such as the repository topic, the number of repositories to check (repo), and the workflow name (run_id). Then it goes on to set up Go, building, running, and saving the output file of the Go program to the GitHub storage.</p>
 <h1 id="indexhtml">index.html</h1>
 <p><a href="https://github.com/iamnihal/gh-archive-web/blob/main/index.html">Click here</a> to view the HTML source code.</p>
@@ -124,10 +134,20 @@ Strategy: Gather user input through an HTML form (hosted via GitHub pages). Trig
             <pubDate>Thu, 22 Jul 2021 19:00:42 +0530</pubDate>
             
             <guid>https://nihalchoudhary.in/posts/2021/07/intro-to-content-security-policy/</guid>
-            <description>Understanding certain web security concepts is crucial for comprehending how browsers, servers, and web applications function in specific scenarios. In this blog post, I&amp;rsquo;ll provide a brief introduction to the Content Security Policy (CSP) mechanism.
-While inspecting the Request/Response cycle, you may have come across this HTTP Header in the response:
-Content-Security-Policy: default-src &#39;self&#39;; script-src static.site.com
-Alternatively, during web app development, you might have encountered this error in the browser console:</description>
+            <description>&lt;p&gt;Understanding certain web security concepts is crucial for comprehending how browsers, servers, and web applications function in specific scenarios. In this blog post, I&amp;rsquo;ll provide a brief introduction to the Content Security Policy (CSP) mechanism.&lt;/p&gt;
+
+  
+  
+  
+  &lt;figure class=&#34;image is-3by2&#34;
+          
+           data-align=&#34;center&#34; &gt;
+    &lt;img alt=&#34;CSP Meme&#34; src=&#34;https://nihalchoudhary.in/csp-meme_hu_69faa4e51a668de9.jpeg&#34; /&gt;
+  &lt;/figure&gt;
+
+&lt;p&gt;While inspecting the Request/Response cycle, you may have come across this HTTP Header in the response:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Content-Security-Policy: default-src &#39;self&#39;; script-src static.site.com&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Alternatively, during web app development, you might have encountered this error in the browser console:&lt;/p&gt;</description>
             <content type="html"><![CDATA[<p>Understanding certain web security concepts is crucial for comprehending how browsers, servers, and web applications function in specific scenarios. In this blog post, I&rsquo;ll provide a brief introduction to the Content Security Policy (CSP) mechanism.</p>
 
   
@@ -136,7 +156,7 @@ Alternatively, during web app development, you might have encountered this error
   <figure class="image is-3by2"
           
            data-align="center" >
-    <img alt="CSP Meme" src="/csp-meme_hud638791df1ce2c466da89a92f7a56f93_114365_450x450_fit_q75_box.jpeg" />
+    <img alt="CSP Meme" src="/csp-meme_hu_69faa4e51a668de9.jpeg" />
   </figure>
 
 <p>While inspecting the Request/Response cycle, you may have come across this HTTP Header in the response:</p>
@@ -218,7 +238,7 @@ Alternatively, during web app development, you might have encountered this error
   <figure class="image is-3by2"
           
            data-align="center" >
-    <img alt="One does not simply" src="/one-does-not_huc07d93c5aae5514ccc16a8ee1616fab8_60004_450x450_fit_q75_box.jpg" />
+    <img alt="One does not simply" src="/one-does-not_hu_8c5edbeb4b0a607a.jpg" />
   </figure>
 
 <hr>
@@ -234,10 +254,22 @@ Alternatively, during web app development, you might have encountered this error
             <pubDate>Thu, 11 Apr 2019 21:27:13 +0530</pubDate>
             
             <guid>https://nihalchoudhary.in/posts/2019/04/automate-the-shit/</guid>
-            <description>In this inaugural blog post, I want to share with you the magic of automation - a concept that can transform your daily tasks from mundane to marvelous.
-Automation is the art of streamlining processes, reducing manual labor, and saving precious time. Why waste hours on repetitive chores when you can automate them effortlessly?
-Story [UPDATE]: wallpaperplay.com is not functional anymore.
-One fateful day, I found myself on a quest for minimalist wallpapers to adorn my Elementary OS desktop.</description>
+            <description>&lt;p&gt;In this inaugural blog post, I want to share with you the magic of automation - a concept that can transform your daily tasks from mundane to marvelous.&lt;/p&gt;
+&lt;p&gt;Automation is the art of streamlining processes, reducing manual labor, and saving precious time. Why waste hours on repetitive chores when you can automate them effortlessly?&lt;/p&gt;
+
+  
+  
+  
+  &lt;figure class=&#34;image is-3by2&#34;
+          
+           data-align=&#34;center&#34; &gt;
+    &lt;img alt=&#34;can this be automated&#34; src=&#34;https://nihalchoudhary.in/can-this-be_hu_48277f85385c022.jpg&#34; /&gt;
+  &lt;/figure&gt;
+
+&lt;hr&gt;
+&lt;h1 id=&#34;story&#34;&gt;Story&lt;/h1&gt;
+&lt;p&gt;&lt;code&gt;[UPDATE]: wallpaperplay.com is not functional anymore.&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;One fateful day, I found myself on a quest for minimalist wallpapers to adorn my Elementary OS desktop. My search led me to the promising trove of wallpapers at wallpaperplay.com. However, there was a caveat—the tedious download process:&lt;/p&gt;</description>
             <content type="html"><![CDATA[<p>In this inaugural blog post, I want to share with you the magic of automation - a concept that can transform your daily tasks from mundane to marvelous.</p>
 <p>Automation is the art of streamlining processes, reducing manual labor, and saving precious time. Why waste hours on repetitive chores when you can automate them effortlessly?</p>
 
@@ -247,7 +279,7 @@ One fateful day, I found myself on a quest for minimalist wallpapers to adorn my
   <figure class="image is-3by2"
           
            data-align="center" >
-    <img alt="can this be automated" src="/can-this-be_hufd4c24f757b396723948b6a95c7438ce_62960_400x450_fit_q75_box.jpg" />
+    <img alt="can this be automated" src="/can-this-be_hu_48277f85385c022.jpg" />
   </figure>
 
 <hr>

@@ -11,7 +11,6 @@ pagerSize  = 10
 rssLimit  = 10  # Maximum number of items in the RSS feed.
 copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License." # This message is only used by the RSS template.
 
-googleAnalytics = "G-CXWDRDDR22"
 # disqusShortname = ""
 
 archetypeDir = "archetypes"
@@ -47,6 +46,14 @@ disableHugoGeneratorInject = false
   tag      = "tags"
   category = "categories"
   series   = "series"
+
+[services]
+  [services.rss]
+      # Maximum number of items in the RSS feed.
+      limit = 42
+      
+   [services.googleAnalytics]
+     ID = 'G-CXWDRDDR22'
 
 [params]
   dateform        = "Jan 2, 2006"
