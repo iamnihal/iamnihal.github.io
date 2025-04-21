@@ -2,11 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://nihalchoudhary.in/books/</loc>
-    <lastmod>2025-02-01T00:00:00+00:00</lastmod>
+    <loc>https://nihalchoudhary.in/posts/2025/04/dont-try/</loc>
+    <lastmod>2025-04-20T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://nihalchoudhary.in/</loc>
-    <lastmod>2025-02-01T00:00:00+00:00</lastmod>
+    <lastmod>2025-04-20T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
@@ -18,14 +18,14 @@
                 href="https://nihalchoudhary.in/"
                 />
   </url><url>
-    <loc>https://nihalchoudhary.in/tags/go-github/</loc>
-    <lastmod>2023-12-31T17:17:04+05:30</lastmod>
-  </url><url>
     <loc>https://nihalchoudhary.in/posts/</loc>
-    <lastmod>2023-12-31T17:17:04+05:30</lastmod>
+    <lastmod>2025-04-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nihalchoudhary.in/tags/selfmusing/</loc>
+    <lastmod>2025-04-20T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://nihalchoudhary.in/tags/</loc>
-    <lastmod>2023-12-31T17:17:04+05:30</lastmod>
+    <lastmod>2025-04-20T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
@@ -36,6 +36,18 @@
                 hreflang="en"
                 href="https://nihalchoudhary.in/tags/"
                 />
+  </url><url>
+    <loc>https://nihalchoudhary.in/posts/2025/04/the-observer-is-the-observed/</loc>
+    <lastmod>2025-04-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nihalchoudhary.in/posts/2025/04/i-know-that-i-know-nothing/</loc>
+    <lastmod>2025-04-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nihalchoudhary.in/books/</loc>
+    <lastmod>2025-02-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nihalchoudhary.in/tags/go-github/</loc>
+    <lastmod>2023-12-31T17:17:04+05:30</lastmod>
   </url><url>
     <loc>https://nihalchoudhary.in/posts/2023/12/utilizing-github-actions-to-serve-a-tool-via-web/</loc>
     <lastmod>2023-12-31T17:17:04+05:30</lastmod>
