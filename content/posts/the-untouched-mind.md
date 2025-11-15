@@ -26,4 +26,4 @@ In Hindu philosophy, this is [**Sat-Chit-Ananda**](https://en.wikipedia.org/wiki
 
 > **“A child is the closest thing to God.”**
 
-Next time you see a child, don’t just look — truly [**observe!**](https://nihalchoudhary.in/posts/2025/04/the-observer-is-the-observed/).
+Next time you see a child, don’t just look. Truly [**observe!**](https://nihalchoudhary.in/posts/2025/04/the-observer-is-the-observed/).
