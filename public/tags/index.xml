@@ -2,46 +2,46 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Nihal</title>
-    <link>http://localhost:61167/tags/</link>
+    <link>https://nihalchoudhary.in/tags/</link>
     <description>Recent content in Tags on Nihal</description>
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
     <lastBuildDate>Thu, 22 Jan 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:61167/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://nihalchoudhary.in/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>SelfMusing</title>
-      <link>http://localhost:61167/tags/selfmusing/</link>
+      <link>https://nihalchoudhary.in/tags/selfmusing/</link>
       <pubDate>Thu, 22 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:61167/tags/selfmusing/</guid>
+      <guid>https://nihalchoudhary.in/tags/selfmusing/</guid>
       <description></description>
     </item>
     <item>
       <title>Go, Github</title>
-      <link>http://localhost:61167/tags/go-github/</link>
+      <link>https://nihalchoudhary.in/tags/go-github/</link>
       <pubDate>Sun, 31 Dec 2023 17:17:04 +0530</pubDate>
-      <guid>http://localhost:61167/tags/go-github/</guid>
+      <guid>https://nihalchoudhary.in/tags/go-github/</guid>
       <description></description>
     </item>
     <item>
       <title>Web-Security</title>
-      <link>http://localhost:61167/tags/web-security/</link>
+      <link>https://nihalchoudhary.in/tags/web-security/</link>
       <pubDate>Thu, 22 Jul 2021 19:00:42 +0530</pubDate>
-      <guid>http://localhost:61167/tags/web-security/</guid>
+      <guid>https://nihalchoudhary.in/tags/web-security/</guid>
       <description></description>
     </item>
     <item>
       <title>Bash</title>
-      <link>http://localhost:61167/tags/bash/</link>
+      <link>https://nihalchoudhary.in/tags/bash/</link>
       <pubDate>Thu, 11 Apr 2019 21:27:13 +0530</pubDate>
-      <guid>http://localhost:61167/tags/bash/</guid>
+      <guid>https://nihalchoudhary.in/tags/bash/</guid>
       <description></description>
     </item>
     <item>
-      <title>RegEx</title>
-      <link>http://localhost:61167/tags/regex/</link>
+      <title>ReGex</title>
+      <link>https://nihalchoudhary.in/tags/regex/</link>
       <pubDate>Thu, 11 Apr 2019 21:27:13 +0530</pubDate>
-      <guid>http://localhost:61167/tags/regex/</guid>
+      <guid>https://nihalchoudhary.in/tags/regex/</guid>
       <description></description>
     </item>
   </channel>

@@ -68,7 +68,7 @@ disableHugoGeneratorInject = false
 
   # Home subtitle of the index page.
   #
-  homeSubtitle = "Security || Coding"
+  homeSubtitle = "Security. Systems. Seeing."
 
   # Set a background for the homepage
   # backgroundImage = "assets/images/background.jpg"
@@ -124,7 +124,7 @@ disableHugoGeneratorInject = false
   # If you want, you can easily override the default footer with your own content. 
   #
   [params.footer]
-    trademark = 2025
+    trademark = 2026
     rss = true
     copyright = false
     author = true
@@ -243,13 +243,13 @@ disableHugoGeneratorInject = false
     weight    = 1
     copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
   [languages.en.params]
-    subtitle  = "Hello Friend NG Theme"
+    subtitle  = ""
 
   [languages.fr]
     weight    = 2
     copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
   [languages.fr.params]
-    subtitle  = "Hello Friend NG Theme"
+    subtitle  = ""
 
 [menu]
   [[menu.main]]
@@ -268,7 +268,7 @@ disableHugoGeneratorInject = false
     url        = "projects/"
     weight     = 3
   [[menu.main]]
-    identifier = "books"
-    name       = "Books"
-    url        = "books/"
+    identifier = "reading"
+    name       = "Reading"
+    url        = "reading/"
     weight     = 4
