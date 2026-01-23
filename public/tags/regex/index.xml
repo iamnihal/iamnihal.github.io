@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>RegEx on Nihal</title>
-    <link>http://localhost:61167/tags/regex/</link>
-    <description>Recent content in RegEx on Nihal</description>
+    <title>ReGex on Nihal</title>
+    <link>https://nihalchoudhary.in/tags/regex/</link>
+    <description>Recent content in ReGex on Nihal</description>
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
     <lastBuildDate>Thu, 11 Apr 2019 21:27:13 +0530</lastBuildDate>
-    <atom:link href="http://localhost:61167/tags/regex/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://nihalchoudhary.in/tags/regex/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Automate the Shit</title>
-      <link>http://localhost:61167/posts/2019/04/automate-the-shit/</link>
+      <link>https://nihalchoudhary.in/posts/2019/04/automate-the-shit/</link>
       <pubDate>Thu, 11 Apr 2019 21:27:13 +0530</pubDate>
-      <guid>http://localhost:61167/posts/2019/04/automate-the-shit/</guid>
-      <description>&lt;p&gt;In this inaugural blog post, I want to share with you the magic of automation - a concept that can transform your daily tasks from mundane to marvelous.&lt;/p&gt;&#xA;&lt;p&gt;Automation is the art of streamlining processes, reducing manual labor, and saving precious time. Why waste hours on repetitive chores when you can automate them effortlessly?&lt;/p&gt;&#xA;&#xA;  &#xA;  &#xA;  &#xA;  &lt;figure class=&#34;image is-3by2&#34;&#xA;          &#xA;           data-align=&#34;center&#34; &gt;&#xA;    &lt;img alt=&#34;can this be automated&#34; src=&#34;http://localhost:61167/can-this-be_hu_9979e9ae97a8a1fb.jpg&#34; /&gt;&#xA;  &lt;/figure&gt;&#xA;&#xA;&lt;hr&gt;&#xA;&lt;h1 id=&#34;story&#34;&gt;Story&lt;/h1&gt;&#xA;&lt;p&gt;&lt;code&gt;[UPDATE]: wallpaperplay.com is not functional anymore.&lt;/code&gt;&lt;/p&gt;&#xA;&lt;p&gt;One fateful day, I found myself on a quest for minimalist wallpapers to adorn my Elementary OS desktop. My search led me to the promising trove of wallpapers at wallpaperplay.com. However, there was a caveat—the tedious download process:&lt;/p&gt;</description>
+      <guid>https://nihalchoudhary.in/posts/2019/04/automate-the-shit/</guid>
+      <description>&lt;p&gt;In this inaugural blog post, I want to share with you the magic of automation - a concept that can transform your daily tasks from mundane to marvelous.&lt;/p&gt;&#xA;&lt;p&gt;Automation is the art of streamlining processes, reducing manual labor, and saving precious time. Why waste hours on repetitive chores when you can automate them effortlessly?&lt;/p&gt;&#xA;&#xA;  &#xA;  &#xA;  &#xA;  &lt;figure class=&#34;image is-3by2&#34;&#xA;          &#xA;           data-align=&#34;center&#34; &gt;&#xA;    &lt;img alt=&#34;can this be automated&#34; src=&#34;https://nihalchoudhary.in/can-this-be_hu_9979e9ae97a8a1fb.jpg&#34; /&gt;&#xA;  &lt;/figure&gt;&#xA;&#xA;&lt;hr&gt;&#xA;&lt;h1 id=&#34;story&#34;&gt;Story&lt;/h1&gt;&#xA;&lt;p&gt;&lt;code&gt;[UPDATE]: wallpaperplay.com is not functional anymore.&lt;/code&gt;&lt;/p&gt;&#xA;&lt;p&gt;One fateful day, I found myself on a quest for minimalist wallpapers to adorn my Elementary OS desktop. My search led me to the promising trove of wallpapers at wallpaperplay.com. However, there was a caveat—the tedious download process:&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

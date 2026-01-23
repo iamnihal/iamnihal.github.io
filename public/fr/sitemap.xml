@@ -2,52 +2,52 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:61167/fr/categories/</loc>
+    <loc>https://nihalchoudhary.in/fr/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:61167/categories/"
+                href="https://nihalchoudhary.in/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://localhost:61167/fr/categories/"
+                href="https://nihalchoudhary.in/fr/categories/"
                 />
   </url><url>
-    <loc>http://localhost:61167/fr/</loc>
+    <loc>https://nihalchoudhary.in/fr/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:61167/"
+                href="https://nihalchoudhary.in/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://localhost:61167/fr/"
+                href="https://nihalchoudhary.in/fr/"
                 />
   </url><url>
-    <loc>http://localhost:61167/fr/series/</loc>
+    <loc>https://nihalchoudhary.in/fr/series/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:61167/series/"
+                href="https://nihalchoudhary.in/series/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://localhost:61167/fr/series/"
+                href="https://nihalchoudhary.in/fr/series/"
                 />
   </url><url>
-    <loc>http://localhost:61167/fr/tags/</loc>
+    <loc>https://nihalchoudhary.in/fr/tags/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:61167/tags/"
+                href="https://nihalchoudhary.in/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://localhost:61167/fr/tags/"
+                href="https://nihalchoudhary.in/fr/tags/"
                 />
   </url>
 </urlset>
