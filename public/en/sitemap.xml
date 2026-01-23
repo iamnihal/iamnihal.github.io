@@ -2,105 +2,105 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://nihalchoudhary.in/</loc>
+    <loc>http://localhost:61167/</loc>
     <lastmod>2026-01-22T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="https://nihalchoudhary.in/fr/"
+                href="http://localhost:61167/fr/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://nihalchoudhary.in/"
+                href="http://localhost:61167/"
                 />
   </url><url>
-    <loc>https://nihalchoudhary.in/posts/</loc>
+    <loc>http://localhost:61167/posts/</loc>
     <lastmod>2026-01-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://nihalchoudhary.in/posts/2026/01/reading-as-a-mirror/</loc>
+    <loc>http://localhost:61167/posts/2026/01/reading-as-a-mirror/</loc>
     <lastmod>2026-01-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://nihalchoudhary.in/tags/selfmusing/</loc>
+    <loc>http://localhost:61167/tags/selfmusing/</loc>
     <lastmod>2026-01-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://nihalchoudhary.in/tags/</loc>
+    <loc>http://localhost:61167/tags/</loc>
     <lastmod>2026-01-22T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="https://nihalchoudhary.in/fr/tags/"
+                href="http://localhost:61167/fr/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://nihalchoudhary.in/tags/"
+                href="http://localhost:61167/tags/"
                 />
   </url><url>
-    <loc>https://nihalchoudhary.in/posts/2025/10/the-untouched-mind/</loc>
+    <loc>http://localhost:61167/posts/2025/10/the-untouched-mind/</loc>
     <lastmod>2025-10-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://nihalchoudhary.in/posts/2025/04/dont-try/</loc>
+    <loc>http://localhost:61167/posts/2025/04/dont-try/</loc>
     <lastmod>2025-04-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://nihalchoudhary.in/posts/2025/04/the-observer-is-the-observed/</loc>
+    <loc>http://localhost:61167/posts/2025/04/the-observer-is-the-observed/</loc>
     <lastmod>2025-04-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://nihalchoudhary.in/posts/2025/04/i-know-that-i-know-nothing/</loc>
+    <loc>http://localhost:61167/posts/2025/04/i-know-that-i-know-nothing/</loc>
     <lastmod>2025-04-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://nihalchoudhary.in/books/</loc>
+    <loc>http://localhost:61167/books/</loc>
     <lastmod>2025-02-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://nihalchoudhary.in/tags/go-github/</loc>
+    <loc>http://localhost:61167/tags/go-github/</loc>
     <lastmod>2023-12-31T17:17:04+05:30</lastmod>
   </url><url>
-    <loc>https://nihalchoudhary.in/posts/2023/12/utilizing-github-actions-to-serve-a-tool-via-web/</loc>
+    <loc>http://localhost:61167/posts/2023/12/utilizing-github-actions-to-serve-a-tool-via-web/</loc>
     <lastmod>2023-12-31T17:17:04+05:30</lastmod>
   </url><url>
-    <loc>https://nihalchoudhary.in/projects/</loc>
+    <loc>http://localhost:61167/projects/</loc>
     <lastmod>2023-10-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://nihalchoudhary.in/about/</loc>
+    <loc>http://localhost:61167/about/</loc>
     <lastmod>2023-09-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://nihalchoudhary.in/posts/2021/07/intro-to-content-security-policy/</loc>
+    <loc>http://localhost:61167/posts/2021/07/intro-to-content-security-policy/</loc>
     <lastmod>2021-07-22T19:00:42+05:30</lastmod>
   </url><url>
-    <loc>https://nihalchoudhary.in/tags/web-security/</loc>
+    <loc>http://localhost:61167/tags/web-security/</loc>
     <lastmod>2021-07-22T19:00:42+05:30</lastmod>
   </url><url>
-    <loc>https://nihalchoudhary.in/posts/2019/04/automate-the-shit/</loc>
+    <loc>http://localhost:61167/posts/2019/04/automate-the-shit/</loc>
     <lastmod>2019-04-11T21:27:13+05:30</lastmod>
   </url><url>
-    <loc>https://nihalchoudhary.in/tags/bash/</loc>
+    <loc>http://localhost:61167/tags/bash/</loc>
     <lastmod>2019-04-11T21:27:13+05:30</lastmod>
   </url><url>
-    <loc>https://nihalchoudhary.in/tags/regex/</loc>
+    <loc>http://localhost:61167/tags/regex/</loc>
     <lastmod>2019-04-11T21:27:13+05:30</lastmod>
   </url><url>
-    <loc>https://nihalchoudhary.in/categories/</loc>
+    <loc>http://localhost:61167/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="https://nihalchoudhary.in/fr/categories/"
+                href="http://localhost:61167/fr/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://nihalchoudhary.in/categories/"
+                href="http://localhost:61167/categories/"
                 />
   </url><url>
-    <loc>https://nihalchoudhary.in/series/</loc>
+    <loc>http://localhost:61167/series/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="https://nihalchoudhary.in/fr/series/"
+                href="http://localhost:61167/fr/series/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://nihalchoudhary.in/series/"
+                href="http://localhost:61167/series/"
                 />
   </url>
 </urlset>

@@ -13,7 +13,7 @@ For a long time, I avoided books. Not because I disliked learning itself but bec
 
 That shift happened when reading was no longer imposed.
 
-Non-fiction, in particular altered the way I see both the inner and outer world. Not by adding more information but by challenging the lens through which I perceive life. Slowly, it became clear that what we often call *“understanding”* is nothing more than **conditioned thought** repeating itself in familiar patterns. And familiarity feels safe to the mind.
+Non-fiction, in particular altered the way I see both the inner and outer world. Not by adding more information but by challenging the lens through which I perceive life. Slowly, it became clear that what we often call *“understanding”* is nothing more than [**conditioned thought**](https://nihalchoudhary.in/posts/2025/10/the-untouched-mind/) repeating itself in familiar patterns. And familiarity feels safe to the mind.
 
 We like to believe that we see the world as it is. In reality, we see it through layers of memory, prejudice, trauma, belief, and habit. Our thought becomes a **cage** and over time we grow comfortable inside it, so comfortable that we begin to mistake the cage itself for freedom.
 

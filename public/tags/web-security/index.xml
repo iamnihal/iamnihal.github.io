@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Web-Security on Nihal</title>
-    <link>https://nihalchoudhary.in/tags/web-security/</link>
+    <link>http://localhost:61167/tags/web-security/</link>
     <description>Recent content in Web-Security on Nihal</description>
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
     <lastBuildDate>Thu, 22 Jul 2021 19:00:42 +0530</lastBuildDate>
-    <atom:link href="https://nihalchoudhary.in/tags/web-security/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:61167/tags/web-security/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Intro to Content Security Policy</title>
-      <link>https://nihalchoudhary.in/posts/2021/07/intro-to-content-security-policy/</link>
+      <link>http://localhost:61167/posts/2021/07/intro-to-content-security-policy/</link>
       <pubDate>Thu, 22 Jul 2021 19:00:42 +0530</pubDate>
-      <guid>https://nihalchoudhary.in/posts/2021/07/intro-to-content-security-policy/</guid>
-      <description>&lt;p&gt;Understanding certain web security concepts is crucial for comprehending how browsers, servers, and web applications function in specific scenarios. In this blog post, I&amp;rsquo;ll provide a brief introduction to the Content Security Policy (CSP) mechanism.&lt;/p&gt;&#xA;&#xA;  &#xA;  &#xA;  &#xA;  &lt;figure class=&#34;image is-3by2&#34;&#xA;          &#xA;           data-align=&#34;center&#34; &gt;&#xA;    &lt;img alt=&#34;CSP Meme&#34; src=&#34;https://nihalchoudhary.in/csp-meme_hu_70ebc6f2627565bc.jpeg&#34; /&gt;&#xA;  &lt;/figure&gt;&#xA;&#xA;&lt;p&gt;While inspecting the Request/Response cycle, you may have come across this HTTP Header in the response:&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;Content-Security-Policy: default-src &#39;self&#39;; script-src static.site.com&lt;/code&gt;&lt;/p&gt;&#xA;&lt;p&gt;Alternatively, during web app development, you might have encountered this error in the browser console:&lt;/p&gt;</description>
+      <guid>http://localhost:61167/posts/2021/07/intro-to-content-security-policy/</guid>
+      <description>&lt;p&gt;Understanding certain web security concepts is crucial for comprehending how browsers, servers, and web applications function in specific scenarios. In this blog post, I&amp;rsquo;ll provide a brief introduction to the Content Security Policy (CSP) mechanism.&lt;/p&gt;&#xA;&#xA;  &#xA;  &#xA;  &#xA;  &lt;figure class=&#34;image is-3by2&#34;&#xA;          &#xA;           data-align=&#34;center&#34; &gt;&#xA;    &lt;img alt=&#34;CSP Meme&#34; src=&#34;http://localhost:61167/csp-meme_hu_70ebc6f2627565bc.jpeg&#34; /&gt;&#xA;  &lt;/figure&gt;&#xA;&#xA;&lt;p&gt;While inspecting the Request/Response cycle, you may have come across this HTTP Header in the response:&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;Content-Security-Policy: default-src &#39;self&#39;; script-src static.site.com&lt;/code&gt;&lt;/p&gt;&#xA;&lt;p&gt;Alternatively, during web app development, you might have encountered this error in the browser console:&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

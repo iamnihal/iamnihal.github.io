@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Go, Github on Nihal</title>
-    <link>https://nihalchoudhary.in/tags/go-github/</link>
+    <link>http://localhost:61167/tags/go-github/</link>
     <description>Recent content in Go, Github on Nihal</description>
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
     <lastBuildDate>Sun, 31 Dec 2023 17:17:04 +0530</lastBuildDate>
-    <atom:link href="https://nihalchoudhary.in/tags/go-github/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:61167/tags/go-github/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Utilizing Github Actions to Serve a tool via Web</title>
-      <link>https://nihalchoudhary.in/posts/2023/12/utilizing-github-actions-to-serve-a-tool-via-web/</link>
+      <link>http://localhost:61167/posts/2023/12/utilizing-github-actions-to-serve-a-tool-via-web/</link>
       <pubDate>Sun, 31 Dec 2023 17:17:04 +0530</pubDate>
-      <guid>https://nihalchoudhary.in/posts/2023/12/utilizing-github-actions-to-serve-a-tool-via-web/</guid>
+      <guid>http://localhost:61167/posts/2023/12/utilizing-github-actions-to-serve-a-tool-via-web/</guid>
       <description>&lt;p&gt;&lt;strong&gt;TL;DR:&lt;/strong&gt; I employed GitHub Actions to execute a Go utility, essentially utilizing GitHub Actions as a server to serve my Go tool via a Web interface.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;Just for fun, I wanted to serve one of my Go tools &lt;a href=&#34;https://github.com/iamnihal/gh-archive&#34;&gt;gh-archive&lt;/a&gt; through a web interface. After some thought, I decided to make use of (or exploit) GitHub Actions.&lt;/p&gt;&#xA;&lt;h1 id=&#34;strategy&#34;&gt;Strategy:&lt;/h1&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Gather user input through an HTML form (hosted via GitHub pages).&lt;/li&gt;&#xA;&lt;li&gt;Trigger a dispatch event to create a workflow in GitHub with a unique name.&lt;/li&gt;&#xA;&lt;li&gt;The GitHub Workflow will perform the tasks of building, running, and saving the output file of the Go program.&lt;/li&gt;&#xA;&lt;li&gt;Retrieve the list of all workflow and iterate through the JSON results to match the workflow name.&lt;/li&gt;&#xA;&lt;li&gt;Check the status of that workflow, if it&amp;rsquo;s completed or not.&lt;/li&gt;&#xA;&lt;li&gt;If the workflow status is completed, retrieve the downloadable URL of the artifacts, download, and extract them.&lt;/li&gt;&#xA;&lt;li&gt;Display the content extracted from the output file back to the user.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;To execute these steps, I skimmed through the GitHub REST API Documentation to identify the necessary APIs for the tasks at hand.&lt;/p&gt;</description>
     </item>
   </channel>
