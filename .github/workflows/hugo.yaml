@@ -59,7 +59,7 @@ jobs:
       - name: Build with Hugo
         env:
           HUGO_CACHEDIR: ${{ runner.temp }}/hugo_cache
-          HUGO_BASEURL: ${{ format('{0}/', steps.pages.outputs.base_url || 'https://nihalchoudhary.in') }}
+          HUGO_BASEURL: https://nihalchoudhary.in/
         run: |
           hugo \
             --gc \
