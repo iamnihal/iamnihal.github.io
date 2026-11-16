@@ -1,4 +1,5 @@
 +++
+title = "Reading"
 date = "2025-02-01"
 aliases = ["books","philosophy","tech"]
 [ author ]
