@@ -1,4 +1,5 @@
 +++
+title = "Projects"
 date = "2023-10-05"
 aliases = ["projects","oss","hobby-projects"]
 [ author ]
