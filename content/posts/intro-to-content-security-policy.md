@@ -100,7 +100,7 @@ This policy allows sources from any scheme (http/https) and any subdomain of tru
 
 `Content-Security-Policy: script-src 'self' api.trusted.com`
 
-This CSP policy permits loading scripts from its own origin and api.trusted.com. It does not allow executing inline-scripts, such as <script> tags, <style> tags, onclick events, etc., as CSP considers them unsafe and disables them by default. You can specify 'unsafe-inline' to enable them, but it's not recommended.
+This CSP policy permits loading scripts from its own origin and api.trusted.com. It does not allow executing inline-scripts, such as `<script>` tags, `<style>` tags, `onclick` events, etc., as CSP considers them unsafe and disables them by default. You can specify 'unsafe-inline' to enable them, but it's not recommended.
 
 `Content-Security-Policy: default-src 'none'`
 

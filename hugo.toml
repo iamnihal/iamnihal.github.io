@@ -1,10 +1,7 @@
-baseURL = "https://nihalchoudhary.in"
+baseURL = "https://nihalchoudhary.in/"
 title   = "Nihal"
-languageCode = "en-us"
+locale = "en-US"
 theme = "hello-friend-ng"
-
-PygmentsCodeFences = true
-PygmentsStyle = "monokai"
 
 copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License." # This message is only used by the RSS template.
 
@@ -23,10 +20,11 @@ enableRobotsTXT = true
 enableGitInfo   = false
 enableEmoji     = true
 enableMissingTranslationPlaceholders = false
-disableRSS     = false
-disableSitemap = false
-disable404     = false
 disableHugoGeneratorInject = false
+
+[markup.highlight]
+  codeFences = true
+  style = "monokai"
 
 [pagination]
   disableAliases = false
@@ -45,9 +43,6 @@ disableHugoGeneratorInject = false
 
 [permalinks]
   posts = "/posts/:year/:month/:title/"
-
-[blackfriday]
-  hrefTargetBlank = true
 
 [taxonomies]
   tag      = "tags"
@@ -109,7 +104,7 @@ disableHugoGeneratorInject = false
   customCSS = []
   customJS  = []
 
-  # Toggle this option need to rebuild SCSS, requires extended version of Hugo
+  # Toggle this option to rebuild SCSS with Dart Sass
   #
   justifyContent = false  # Set "text-align: justify" to .post-content.
 
@@ -131,7 +126,7 @@ disableHugoGeneratorInject = false
 
     topText = []
     bottomText = [
-      "Powered by <a href=\"http://gohugo.io\">Hugo</a>"
+      "Powered by <a href=\"https://gohugo.io\">Hugo</a>"
     ]
 
   # Colors for favicons
@@ -243,12 +238,6 @@ disableHugoGeneratorInject = false
     weight    = 1
     copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
   [languages.en.params]
-    subtitle  = ""
-
-  [languages.fr]
-    weight    = 2
-    copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
-  [languages.fr.params]
     subtitle  = ""
 
 [menu]
