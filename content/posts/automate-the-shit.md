@@ -10,7 +10,7 @@ tags:
   - ReGex
 ---
 
-In this post, I want to share with you a simple automation that I worked on,
+In this post, I want to share a simple automation I worked on.
 
 {{< image src="/can-this-be.jpg" alt="can this be automated" size="400x450" align="center" >}}
 
