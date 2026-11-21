@@ -10,9 +10,7 @@ tags:
   - ReGex
 ---
 
-In this inaugural blog post, I want to share with you the magic of automation - a concept that can transform your daily tasks from mundane to marvelous.
-
-Automation is the art of streamlining processes, reducing manual labor, and saving precious time. Why waste hours on repetitive chores when you can automate them effortlessly?
+In this post, I want to share with you a simple automation that I worked on,
 
 {{< image src="/can-this-be.jpg" alt="can this be automated" size="400x450" align="center" >}}
 
@@ -21,7 +19,7 @@ Automation is the art of streamlining processes, reducing manual labor, and savi
 # Story
 `[UPDATE]: wallpaperplay.com is not functional anymore.`
 
-One fateful day, I found myself on a quest for minimalist wallpapers to adorn my Elementary OS desktop. My search led me to the promising trove of wallpapers at wallpaperplay.com. However, there was a caveat—the tedious download process:
+One day, I found myself on a quest for minimalist wallpapers for my Elementary OS desktop. My search led me to the wallpaperplay.com. However, there was a caveat, the tedious download process:
 
 1. Click the Download button.
 2. Wait for a 5-second countdown.
@@ -30,7 +28,7 @@ One fateful day, I found myself on a quest for minimalist wallpapers to adorn my
 
 I asked myself, "Who has the patience for these four steps just to download a wallpaper?" Certainly not me.
 
-It was then that I had a idea to automate this time-consuming process.
+It was then that I had a idea to automate this time consuming process.
 
 ---
 
